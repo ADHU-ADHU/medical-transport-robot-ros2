@@ -10,12 +10,20 @@ The project explores a practical question: after an operator teaches a route, ho
 
 *The finished robot platform. [Hardware photos and source details](docs/assets/README.md).*
 
+## Recorded demos
+
 | Physical robot · Run 1 | Physical robot · Run 2 |
 | :---: | :---: |
 | ![Run 1: robot moving through the indoor test area](docs/demos/run-1-preview.gif) | ![Run 2: a second indoor robot run](docs/demos/run-2-preview.gif) |
 | [Watch Run 1](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) | [Watch Run 2](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) |
 
-*Short previews from two independent runs, shown at normal speed. [Full recordings and desktop previews →](docs/demos/README.md)*
+### Frontier planning
+
+![Recorded frontier selection and path-planning display](docs/demos/frontier-planning-preview.gif)
+
+[Watch full frontier planning](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view?usp=drivesdk) · [Watch all seven recordings →](docs/demos/README.md#all-seven-recordings)
+
+*The robot runs and frontier-planning display are separate recordings, shown at normal speed.*
 
 [Setup and operation](docs/setup.md) · [Architecture and topic contracts](docs/architecture.md) · [Experiments](experiments/README.md) · [Validation and limitations](docs/validation.md)
 
