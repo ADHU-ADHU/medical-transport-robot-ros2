@@ -1,6 +1,6 @@
 # RoverLink · Teleoperation, Teach-and-Return & Exploration
 
-**ROS 2 · Differential-drive robot · Wi-Fi DDS · LiDAR · A* · Python**
+**ROS 2 · Differential-drive robot · Wi-Fi DDS · LiDAR · A-star · Python**
 
 RoverLink connects an operator PC to a mobile robot for joystick driving, recorded-route return and frontier exploration. The PC handles user input, planning, SLAM and visualization; the robot handles motors, encoders, IMU and LiDAR. The two sides exchange ROS topics over Wi-Fi.
 
