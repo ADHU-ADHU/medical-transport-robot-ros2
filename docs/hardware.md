@@ -17,6 +17,10 @@ The published software targets the **LD06** and **MPU6050** interfaces. Confirm 
 
 The pose node assumes a 0.10 m wheel diameter, 0.35 m wheel separation and 360 encoder ticks per revolution. These are calibration values in the code and should be checked for the actual assembly. The selected node publishes both gyro-heading/encoder position and an encoder-only comparison pose. See [robot setup](../robot/README.md) for topic units, launch commands and hardware-access requirements.
 
+## Drive system
+
+The platform uses **differential drive**. The left and right wheels are driven independently through the MD25 controller. Changing their relative speeds steers the robot; equal speeds produce straight travel. This arrangement does not use a mechanical differential gearbox.
+
 ## Hardware and development resources
 
 The following resources were available for building the platform. The selected implementation above identifies the interfaces used by the published software; the list below also includes supporting equipment and components for further integration.

@@ -99,6 +99,8 @@ Return control is placed on the PC in this layout; it has no direct hardware dep
 
 ## Hardware
 
+The platform uses **differential drive**: two separately controlled motors steer it by varying the left and right wheel speeds.
+
 <img src="docs/assets/roverlink-hardware.jpg" width="680" alt="Open robot chassis showing the Raspberry Pi, LiDAR, motor driver and wiring">
 
 | Component | Role |
