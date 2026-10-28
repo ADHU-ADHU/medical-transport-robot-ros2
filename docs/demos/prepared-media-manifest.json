@@ -87,7 +87,7 @@
       "source_bytes": 10797101
     },
     {
-      "file": "frontier-planning-run-2-preview.gif",
+      "file": "frontier-disturbance-preview.gif",
       "source": "Frontier_explorer_with_disturbance.webm",
       "source_start_seconds": 14,
       "source_duration_seconds": 18,
@@ -103,8 +103,9 @@
       "height": 375,
       "frames": 108,
       "output_duration_seconds": 18.0,
-      "user_identified_run": "Run 2 frontier cluster/map recording",
-      "timing_note": "Normal-speed source excerpt. Pairing with the physical Run 2 footage does not establish frame-level synchronization."
+      "timing_note": "Normal-speed excerpt. Not paired with physical Run 2.",
+      "recording_role": "Standalone frontier disturbance recording; no corresponding physical robot video supplied."
     }
-  ]
+  ],
+  "paired_views_manifest": "composite-media-manifest.json"
 }

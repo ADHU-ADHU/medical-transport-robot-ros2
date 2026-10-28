@@ -35,4 +35,4 @@ Virtual environments, build/install/log trees, caches, bag recordings, generated
 
 ## Media
 
-Two full physical-robot clips are included as compact, silent H.264 downloads, with normal-speed GIF excerpts. Desktop excerpts show frontier plots and RViz2. Original recordings remain unchanged outside the repository. [Media manifests and captions](demos/README.md) record the transforms and scope of what is visible; public Drive links provide browser playback of the original live runs.
+Two full physical-robot clips are included as compact, silent H.264 downloads. Paired views place the full Run 1 video beside its frontier map and the full Run 2 video beside a selected SLAM window. Each pair uses one playback clock with approximate visual alignment. The frontier disturbance capture remains separate, without a corresponding physical robot video. Individual desktop excerpts show frontier plots and RViz2. Original recordings remain unchanged outside the repository. [Media manifests and captions](demos/README.md) record the transforms and scope of what is visible; public Drive links provide browser playback of the original live runs.

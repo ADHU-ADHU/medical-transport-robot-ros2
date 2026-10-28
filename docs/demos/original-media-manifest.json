@@ -29,7 +29,7 @@
         "permissions_changed": false,
         "match_basis": "Exact source filename and byte size"
       },
-      "author_identified_run": 2
+      "recording_role": "Standalone frontier disturbance recording; no physical robot video supplied."
     },
     {
       "source": "Run1_video.mp4",
@@ -192,7 +192,8 @@
         "allow_file_discovery": false,
         "permissions_changed": false,
         "match_basis": "Exact source filename and byte size"
-      }
+      },
+      "displayed_alongside_physical_run": 2
     },
     {
       "source": "slam_with_distrubance.webm",
@@ -223,5 +224,5 @@
       }
     }
   ],
-  "pairing_note": "The author identified the two frontier-map recordings as corresponding to physical Runs 1 and 2. Independently recorded previews are not time-synchronized."
+  "pairing_note": "Physical Run 1 is displayed with the baseline Run 1 frontier map; physical Run 2 is displayed with the Run 2 SLAM capture. The frontier disturbance recording is standalone and has no corresponding physical robot video. Composite playback uses one clock; exact event synchronization is not verified."
 }

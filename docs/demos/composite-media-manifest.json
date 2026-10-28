@@ -1,0 +1,305 @@
+{
+  "path_convention": "Source filenames refer to the supplied Telerobotics folder. Output paths are relative to this repository.",
+  "purpose": "One playback clock per paired presentation; whole physical runs shown with selected desktop windows.",
+  "pairing_note": "Run 1 uses the baseline frontier capture; Run 2 uses the Run 2 SLAM capture. The frontier disturbance capture has no corresponding physical robot video.",
+  "synchronization_note": "Timing offsets are approximate visual alignment, not verified frame-accurate event synchronization. Original recordings remain unchanged.",
+  "composites": [
+    {
+      "name": "Run 1 physical robot and frontier map",
+      "sources": [
+        {
+          "source": "Run1_video.mp4",
+          "sha256": "47244d92b883823db2777077c7063b2d3c1f26a6aa9ab888e2df88a9c698ad01",
+          "start_seconds": 0,
+          "duration_seconds": 40.154567,
+          "crop": null,
+          "scale": "192px wide, aspect ratio retained with even height",
+          "panel_title": "Run 1 Robot"
+        },
+        {
+          "source": "frontier_exploration_no_distrubance_run1.webm",
+          "sha256": "ab26858f83704d15a7097eb8fa5bc00c6aa94124bb75bce6db3a3c917398b7e2",
+          "start_seconds": 13,
+          "duration_seconds": 40.154567,
+          "crop": {
+            "width": 780,
+            "height": 610,
+            "x": 25,
+            "y": 25
+          },
+          "scale": {
+            "width": 500,
+            "height": 390
+          },
+          "panel_title": "Frontier map"
+        }
+      ],
+      "layout": {
+        "width": 760,
+        "height": 438,
+        "robot_panel_width": 212,
+        "map_panel_width": 500,
+        "content_height": 390,
+        "content_x": 24,
+        "content_y": 40,
+        "background": "#101923"
+      },
+      "timing": {
+        "speed": 1.0,
+        "playback_clock": "Both panels are encoded into one file and share the same playback clock.",
+        "temporal_alignment_confidence": "approximate",
+        "alignment_basis": "The desktop capture has terminal startup before the map appears. Source 13 seconds is an early visible plot near the initial robot pose. No shared timestamp establishes frame-accurate synchronization with the handheld physical recording.",
+        "relative_start_offset_seconds": 13,
+        "robot_window_seconds": [
+          0,
+          40.154567
+        ],
+        "map_window_seconds": [
+          13,
+          53.154567
+        ],
+        "stretch_or_speed_change": false,
+        "last_frame_holds_added": false
+      },
+      "audio": "removed",
+      "outputs": [
+        {
+          "width": 760,
+          "height": 438,
+          "encoding": "H264 CRF25,yuv420p,24fps,faststart",
+          "duration_seconds": 40.166667,
+          "bytes": 993721,
+          "sha256": "034973863233611cb21464a05f639f7b6590aead1c55cb1b32d3634ef04eac1b",
+          "path": "docs/demos/run-1-robot-frontier.mp4"
+        },
+        {
+          "width": 760,
+          "height": 438,
+          "encoding": "GIF,4fps,96-color full-frame palette,Bayer scale5,loop forever",
+          "duration_seconds": 40.25,
+          "bytes": 5136912,
+          "sha256": "ed6494f558e31ece7d5bbee0dfd54a29a52b311fc0b9a4e4a87abbd50d822586",
+          "path": "docs/demos/run-1-robot-frontier.gif"
+        }
+      ],
+      "commands": {
+        "mp4": [
+          "ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-threads",
+          "2",
+          "-i",
+          "${SOURCE_ROOT}/Run1_video.mp4",
+          "-ss",
+          "13",
+          "-threads",
+          "2",
+          "-i",
+          "${SOURCE_ROOT}/frontier_exploration_no_distrubance_run1.webm",
+          "-t",
+          "40.154567",
+          "-an",
+          "-map_metadata",
+          "-1",
+          "-filter_complex_threads",
+          "1",
+          "-filter_complex",
+          "[0:v]setpts=PTS-STARTPTS,fps=24,scale=192:-2:flags=lanczos,pad=212:390:10:(oh-ih)/2:color=0x101923[r];[1:v]setpts=PTS-STARTPTS,crop=780:610:25:25,fps=24,scale=500:390:flags=lanczos[m];[r][m]hstack=shortest=1,pad=760:438:24:40:color=0x101923,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='Run 1 Robot':fontcolor=white:fontsize=19:x=34:y=11,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='Frontier map':fontcolor=white:fontsize=19:x=236:y=11[v]",
+          "-map",
+          "[v]",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "medium",
+          "-crf",
+          "25",
+          "-pix_fmt",
+          "yuv420p",
+          "-movflags",
+          "+faststart",
+          "-threads",
+          "2",
+          "-y",
+          "${REPOSITORY_ROOT}/docs/demos/run-1-robot-frontier.mp4"
+        ],
+        "gif": [
+          "ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-threads",
+          "2",
+          "-i",
+          "${SOURCE_ROOT}/Run1_video.mp4",
+          "-ss",
+          "13",
+          "-threads",
+          "2",
+          "-i",
+          "${SOURCE_ROOT}/frontier_exploration_no_distrubance_run1.webm",
+          "-t",
+          "40.154567",
+          "-an",
+          "-map_metadata",
+          "-1",
+          "-filter_complex_threads",
+          "1",
+          "-filter_complex",
+          "[0:v]setpts=PTS-STARTPTS,fps=24,scale=192:-2:flags=lanczos,pad=212:390:10:(oh-ih)/2:color=0x101923[r];[1:v]setpts=PTS-STARTPTS,crop=780:610:25:25,fps=24,scale=500:390:flags=lanczos[m];[r][m]hstack=shortest=1,pad=760:438:24:40:color=0x101923,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='Run 1 Robot':fontcolor=white:fontsize=19:x=34:y=11,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='Frontier map':fontcolor=white:fontsize=19:x=236:y=11,fps=4,split[s0][s1];[s0]palettegen=max_colors=96:stats_mode=full[p];[s1][p]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle[v]",
+          "-map",
+          "[v]",
+          "-loop",
+          "0",
+          "-threads",
+          "2",
+          "-y",
+          "${REPOSITORY_ROOT}/docs/demos/run-1-robot-frontier.gif"
+        ]
+      },
+      "validation": {
+        "mp4_full_decode": "passed",
+        "gif_frames": 161,
+        "gif_total_frame_duration_seconds": 40.25,
+        "plot_visibility_inspection": "Cropped source frames at 13,18,23,28,33,38,43,48 seconds inspected. Plot visible in each.",
+        "gif_selected_frame_inspection": "Output frames at playback 0,5,15,25,39 seconds visually inspected; both panels and labels visible.",
+        "gif_palette_selection": "A full-frame 96-color palette retained the frontier plot colours better than a 64-color difference palette."
+      },
+      "commands_path_convention": "SOURCE_ROOT denotes the supplied Telerobotics folder; REPOSITORY_ROOT denotes this repository checkout. Host-specific absolute paths were replaced by these placeholders."
+    },
+    {
+      "name": "Run 2 physical robot and SLAM map",
+      "sources": [
+        {
+          "sha256": "e480be086e60fcdb32d37cf76b99df8318ebc117487bb38b56179850f8928fde",
+          "probe": {
+            "programs": [],
+            "streams": [
+              {
+                "index": 0,
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 478,
+                "height": 850,
+                "avg_frame_rate": "94140000/3138433",
+                "nb_frames": "1046"
+              },
+              {
+                "index": 1,
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "avg_frame_rate": "0/0",
+                "nb_frames": "1634"
+              }
+            ],
+            "format": {
+              "duration": "34.871478",
+              "size": "6995037"
+            }
+          },
+          "in_seconds": 0.0,
+          "video_out_seconds": 34.866667,
+          "note": "All1046 original physical video frames retained at30fps; audio excluded.",
+          "source": "Run2_video.mp4"
+        },
+        {
+          "sha256": "820af4dcb708a2f3b1c05696a81a357c3c7e6dfa4b28f5b7cfb6f200eb5d2941",
+          "probe": {
+            "programs": [],
+            "streams": [
+              {
+                "index": 0,
+                "codec_name": "vp8",
+                "codec_type": "video",
+                "width": 2466,
+                "height": 1527,
+                "avg_frame_rate": "0/0"
+              }
+            ],
+            "format": {
+              "duration": "112.956844",
+              "size": "13900934"
+            }
+          },
+          "in_seconds": 70.0,
+          "out_seconds": 104.866667,
+          "note": "Desktop startup and RViz setup omitted; contiguous normal-speed35-second map window. Crop x550,y400,width1300,height1000 pixels.",
+          "source": "slam_frontier_exploration_nodisturbacne_run2.webm"
+        }
+      ],
+      "alignment": {
+        "method": "Approximate visual alignment; one contiguous shared composite playback clock.",
+        "exact_sync_verified": false,
+        "confidence": "Approximate, no common timestamps visible.",
+        "evidence": "Run2 SLAM desktop capture starts with terminal/desktop setup, RViz becomes maximized around45s, and map/pose changes visibly begin around71\u201372s after a nearly stationary interval. The70s source offset starts just before that movement and pairs the full physical run with a useful map window. Source names indicate run2; no shared timestamps prove frame-level synchronization.",
+        "source_offset_seconds": 70.0,
+        "speed_factor": 1.0,
+        "motion_retiming": false,
+        "source_splicing": false
+      },
+      "transforms": {
+        "mp4": "Physical video scaled to252x448 without content crop. RViz map cropped1300x1000 at550,400, scaled548x422 and vertically padded to548x448. Side-by-side800x448, dark title/footer bars form800x520. Original video frame rate30fps, H.264 CRF23 medium yuv420p faststart, silent.",
+        "gif": "Same composite at4fps,720x468,80-color difference palette, no dithering, looping. FPS sampling uses rounding up to140frames/35.00s; no playback acceleration.",
+        "labels": [
+          "Run 2 - Robot",
+          "SLAM map (RViz2)",
+          "Normal speed | Approximate visual alignment"
+        ]
+      },
+      "outputs": [
+        {
+          "path": "docs/demos/run-2-robot-slam.mp4",
+          "sha256": "60b452abb6e5b22fc43dda7844adf88a7e60c808f5ded6ebf82816d29858717e",
+          "probe": {
+            "programs": [],
+            "streams": [
+              {
+                "index": 0,
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 800,
+                "height": 520,
+                "avg_frame_rate": "30/1",
+                "nb_frames": "1046"
+              }
+            ],
+            "format": {
+              "duration": "34.866667",
+              "size": "1390794"
+            }
+          }
+        },
+        {
+          "path": "docs/demos/run-2-robot-slam.gif",
+          "sha256": "f29ce9626d41794322384e118487e79258d9ceae36982f13e9cae85411fb5175",
+          "probe": {
+            "programs": [],
+            "streams": [
+              {
+                "index": 0,
+                "codec_name": "gif",
+                "codec_type": "video",
+                "width": 720,
+                "height": 468,
+                "avg_frame_rate": "4/1",
+                "nb_frames": "140"
+              }
+            ],
+            "format": {
+              "duration": "35.000000",
+              "size": "4786427"
+            }
+          }
+        }
+      ],
+      "validation": {
+        "full_decode": "Both outputs decoded with FFmpeg without errors.",
+        "visual_qa": "Reviewed source contact sheets and composite start/mid/end. Map crop excludes terminals and RViz sidebars; map remains in frame.",
+        "gif_frame_count": 140,
+        "gif_duration_seconds": 35.0,
+        "audio_published": false
+      }
+    }
+  ]
+}

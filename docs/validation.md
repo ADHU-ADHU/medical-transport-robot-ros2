@@ -9,7 +9,7 @@ The source was reviewed together with the author's reflection, wider hardware re
 - Two synthetic checks pass: actual local DDS delivery of `PoseStamped` goals and planned paths through selector → planner → follower, and installed executable/configuration discovery.
 - The synthetic graph uses an isolated localhost ROS domain, a generated occupancy grid and no physical sensors or joystick. It does not open the plotting windows or execute the control loop on a robot.
 - Python syntax, ROS package XML, notebook structure, source hashes, documentation links and prepared media are checked separately.
-- Both published full MP4s decode completely. Their playback speed and framing are retained; audio is removed. Preview transforms are recorded in the media manifest.
+- The original full-run MP4 downloads and both paired MP4/GIF edits decode completely. The source motion remains at normal speed; audio is omitted. Paired edits retain each full robot run and crop a selected desktop window, with approximate alignment and a shared playback clock. Transforms are recorded in the media manifests.
 
 No live robot, motor, I²C device or joystick was operated during repository preparation. The original platform was Humble; a successful Jazzy package build is not a hardware compatibility result. The local test environment does not have pygame installed, so joystick execution was not tested.
 

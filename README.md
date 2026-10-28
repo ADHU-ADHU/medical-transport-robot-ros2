@@ -14,18 +14,21 @@ Frontier exploration is one part of the broader teleoperation and return workflo
 
 ## Recorded demos
 
-| Physical robot | Frontier planning map |
-| :---: | :---: |
-| **Run 1** | **Run 1** |
-| ![Run 1: physical robot](docs/demos/run-1-preview.gif) | <img src="docs/demos/frontier-planning-preview.gif" width="320" alt="Run 1 frontier clusters and planned path"> |
-| [Watch Run 1](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) | [Watch Run 1 frontier map](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) |
-| **Run 2** | **Run 2 · disturbance recording** |
-| ![Run 2: physical robot](docs/demos/run-2-preview.gif) | <img src="docs/demos/frontier-planning-run-2-preview.gif" width="320" alt="Run 2 frontier clusters and planned path from the disturbance recording"> |
-| [Watch Run 2](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) | [Watch Run 2 frontier map](https://drive.google.com/file/d/1a5PYxGajpSwgzHGgYuOJLI3B1tPuujmC/view) |
+### Run 1 · Robot and frontier planning
 
-*Corresponding robot and frontier views for each run. Previews play independently at normal speed.*
+![Run 1 physical robot and frontier map playing together](docs/demos/run-1-robot-frontier.gif)
 
-[Full recordings and desktop previews · all seven videos →](docs/demos/README.md#all-seven-recordings)
+[Watch original robot video](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) · [Watch full frontier recording](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/roverlink-ros2/main/docs/demos/run-1-robot-frontier.mp4)
+
+### Run 2 · Robot and SLAM
+
+![Run 2 physical robot and SLAM map playing together](docs/demos/run-2-robot-slam.gif)
+
+[Watch original robot video](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) · [Watch full SLAM recording](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/roverlink-ros2/main/docs/demos/run-2-robot-slam.mp4)
+
+*Each pair uses one playback clock, so both panels start and loop together at normal speed. Full robot runs are shown beside selected desktop windows; motion alignment is approximate because the sources have no shared timestamp.*
+
+[Full recordings and desktop previews · all seven originals, including the separate disturbance recordings →](docs/demos/README.md#all-seven-recordings)
 
 [Setup and operation](docs/setup.md) · [Architecture and topic contracts](docs/architecture.md) · [Experiments](experiments/README.md) · [Validation and limitations](docs/validation.md) · [Reflection report](docs/reports/reflection-report.pdf)
 
