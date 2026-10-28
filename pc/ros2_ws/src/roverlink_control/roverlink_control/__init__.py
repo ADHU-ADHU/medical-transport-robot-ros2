@@ -1,1 +1,1 @@
-"""Operator-side teleoperation, return and exploration nodes for the medical transport robot."""
+"""Operator-side teleoperation, return and exploration nodes for the mobile robot."""

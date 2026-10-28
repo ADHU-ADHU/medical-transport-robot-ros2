@@ -1,39 +1,41 @@
-# ROS 2 Medical Transport Robot
+# ROS 2 Mobile Robot Platform
 
-**Teleoperation · Return to Base · LiDAR/IMU Feedback · ROS 2 · Python**
+**Hardware Integration · Teleoperation · Return to Base · SLAM · ROS 2 · Python**
 
-A custom-built mobile robot prototype for transporting medical equipment through hospital-like indoor environments. An operator remotely drives the robot with joystick commands and live sensor feedback, then commands it to return to its starting point.
+A working mobile robot built from scratch by integrating drive hardware, an onboard computer, wheel encoders, an IMU and LiDAR through ROS 2. The platform supports remote control, live sensor feedback and commanded return to base.
 
 The PC provides the operator interface, mapping and visualization. The onboard Raspberry Pi handles motor commands, wheel encoders, inertial sensing and LiDAR. ROS 2 connects both sides over Wi-Fi.
 
-## Core transport workflow
+## Teleoperation and return workflow
 
 1. **Drive remotely:** the operator controls travel using live LiDAR, pose and map feedback.
 2. **Record the route:** encoder and gyro-based pose estimates retain the driven trajectory.
 3. **Command return to base:** manual publishing pauses and the return controller follows the recorded route back toward the start.
 4. **Handle obstacles locally:** LiDAR-based turn/drive avoidance attempts to rejoin the return path.
 
-The main project is teleoperated transport with commanded return. Frontier exploration is an additional capability; a dedicated [TurtleBot3 exploration implementation using ROS 2 Jazzy](https://github.com/ADHU-ADHU/turtlebot3-hybrid-exploration-ros2) is available separately. See [project context and implementation coverage](docs/project-context.md) for the wider transport scenario and what this repository implements.
+The goal was to build and integrate a working robot from individual components. An example brief—remotely delivering equipment through indoor corridors and returning to base on command—motivated the teleoperation, sensing and return-control functions. See [project context and implementation coverage](docs/project-context.md) for what was requested and what this repository implements.
 
-<img src="docs/assets/roverlink-robot.jpg" width="680" alt="Custom-built medical transport robot prototype with enclosure and top-mounted LiDAR">
+Frontier exploration is an additional capability. A dedicated [TurtleBot3 exploration implementation using ROS 2 Jazzy](https://github.com/ADHU-ADHU/turtlebot3-hybrid-exploration-ros2) is available separately.
 
-*The assembled transport robot prototype. [Hardware and supplied resources](docs/hardware.md) · [Photo provenance](docs/assets/README.md).*
+<img src="docs/assets/roverlink-robot.jpg" width="680" alt="Custom-built mobile robot with enclosure and top-mounted LiDAR">
+
+*The assembled mobile robot platform. [Hardware and supplied resources](docs/hardware.md) · [Photo provenance](docs/assets/README.md).*
 
 ## Recorded demos
 
-Physical robot and mapping/exploration trials from the wider transport-control project.
+Physical robot runs alongside recorded mapping and exploration displays.
 
 ### Run 1 · Robot and frontier planning
 
 ![Run 1 physical robot and frontier map playing together](docs/demos/run-1-robot-frontier.gif)
 
-[Watch original robot video](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) · [Watch full frontier recording](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-1-robot-frontier.mp4)
+[Watch original robot video](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) · [Watch full frontier recording](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/mobile-robot-platform-ros2/main/docs/demos/run-1-robot-frontier.mp4)
 
 ### Run 2 · Robot and SLAM
 
 ![Run 2 physical robot and SLAM map playing together](docs/demos/run-2-robot-slam.gif)
 
-[Watch original robot video](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) · [Watch full SLAM recording](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-2-robot-slam.mp4)
+[Watch original robot video](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) · [Watch full SLAM recording](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/mobile-robot-platform-ros2/main/docs/demos/run-2-robot-slam.mp4)
 
 *Each pair uses one playback clock, so both panels start and loop together at normal speed. Full robot runs are shown beside selected desktop windows; motion alignment is approximate because the sources have no shared timestamp.*
 
@@ -52,7 +54,7 @@ Physical robot and mapping/exploration trials from the wider transport-control p
 
 ## Additional work and experiments
 
-- **Frontier exploration:** frontier clustering, inflated-grid A*, line-of-sight shortcutting, moving-average smoothing and local path tracking. This is an extension to the transport project.
+- **Frontier exploration:** frontier clustering, inflated-grid A*, line-of-sight shortcutting, moving-average smoothing and local path tracking. This extends the platform beyond the example teleoperation-and-return task.
 - **Route smoothing:** a separate Gaussian-filtered return experiment.
 - **Heading fusion:** scalar and heading/gyro-bias Kalman-filter notebook variants, separate from the main pose node.
 - **Multi-stop routing:** an [OR-Tools TSP prototype](experiments/multi_stop/tsp_prototype.py) orders entered waypoints and passes them to a motor-control follower. It has known distance-precision and route-handling limitations and is separate from the recorded return-control chain.

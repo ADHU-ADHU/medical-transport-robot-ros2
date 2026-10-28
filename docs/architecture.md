@@ -1,6 +1,6 @@
 # Architecture and interfaces
 
-The application is teleoperated medical transport with commanded return to base. The core ROS deployment links an operator PC to the vehicle's onboard motor and sensor services. Frontier exploration is a separate operating mode. [Project context](project-context.md) describes the wider mission and implementation coverage.
+The platform brings together the hardware interfaces and ROS 2 software needed to operate a mobile robot built from components. The core deployment links an operator PC to onboard motor, encoder, IMU and LiDAR services, supporting teleoperation, recorded-route return and sensor feedback. Frontier exploration is a separate operating mode. [Project context](project-context.md) describes the platform goals, example application and implementation coverage.
 
 ## Deployment
 

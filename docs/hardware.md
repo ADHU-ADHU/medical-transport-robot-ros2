@@ -1,6 +1,6 @@
 # Hardware and platform
 
-The project uses a custom-built ROS 2 mobile platform for medical transport and automatic return in hospital-like indoor environments. Hardware services run on the robot; the operator PC provides teleoperation, visualization and the selected planning/return processes.
+The goal is to build a working mobile robot from individual hardware components and integrate its drive, sensing, communication and control through ROS 2. Hardware services run on the robot; the operator PC provides teleoperation, visualization and the selected planning/return processes.
 
 ## Selected implementation
 
@@ -28,12 +28,12 @@ The following inventory comes from `2025Telerobotics_Lab4.pdf`, pages 2-3. It re
 | Arrival indication and payload interfaces | Buzzer; LEDs; micro switch; ULN2004 Darlington driver; PCF8574 I2C port expander; padlock with key |
 | Development boards and assembly tools | ESP32 Huzzah (M65); Arduino Uno and USB cables; two breadboards; jumper cables; screwdriver; double-sided tape; cable ties and cable tape; scissors and Post-it notes |
 
-The medical-transport concept also considers arrival indication and payload handling. The curated implementation does not establish completed buzzer, flashing-light or parcel-release integration. Those components belong to the broader platform resources and future integration scope.
+The example equipment-delivery brief also considers arrival indication and payload handling. The curated implementation does not establish completed buzzer, flashing-light or parcel-release integration. Those components belong to the broader platform resources and future integration scope.
 
 ## Drive-model detail
 
 `2025Telerobotics_Projektdirective20251104.pdf`, page 3, explicitly specifies a differential-drive platform in its real-vehicle requirements. The selected controller mixes forward and turn demands into two wheel commands, and the encoder model estimates heading change from the difference between right and left wheel displacement. This is the motion model used by the supplied control and estimation code.
 
-The public project is presented around its medical-transport mission, teleoperation and automatic-return behavior. The supplied material does not identify a commercial chassis model. The hardware laboratory establishes the control foundation; it does not describe the full scope or completion status of the medical-transport system.
+The project centers on building and integrating a working mobile robot, including teleoperation and commanded return. The supplied material does not identify a commercial chassis model. The example delivery scenario motivated the control requirements; the hardware resources supported assembly, sensor bring-up and integration.
 
 The handouts named above were used as reference context and are not included in this repository.

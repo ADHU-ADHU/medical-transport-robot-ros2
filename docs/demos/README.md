@@ -22,19 +22,19 @@ All **seven full recordings** are linked below: two physical robot runs, two fro
 
 ![Run 1 robot and frontier map on one playback clock](run-1-robot-frontier.gif)
 
-[Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-1-robot-frontier.mp4) · [Original robot video](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) · [Original frontier capture](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view)
+[Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/mobile-robot-platform-ros2/main/docs/demos/run-1-robot-frontier.mp4) · [Original robot video](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) · [Original frontier capture](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view)
 
 ### Run 2 · Robot and SLAM
 
 ![Run 2 robot and SLAM map on one playback clock](run-2-robot-slam.gif)
 
-[Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-2-robot-slam.mp4) · [Original robot video](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) · [Original SLAM capture](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view)
+[Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/mobile-robot-platform-ros2/main/docs/demos/run-2-robot-slam.mp4) · [Original robot video](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) · [Original SLAM capture](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view)
 
 Each composite retains the full physical robot run and a matching-length desktop window, at normal speed with audio omitted. A single animation makes the panels start and loop together. Visible motion is aligned approximately; no shared clock establishes exact event synchronization. Source windows, crops and encoding are recorded in the [composite media manifest](composite-media-manifest.json).
 
 The frontier disturbance recording has **no corresponding physical robot video** in the supplied material. It is included separately in the full library above and the frontier previews below.
 
-The original camera runs also have compact silent downloads: [Run 1 — 40 seconds](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-1-live.mp4) and [Run 2 — 35 seconds](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-2-live.mp4).
+The original camera runs also have compact silent downloads: [Run 1 — 40 seconds](https://raw.githubusercontent.com/ADHU-ADHU/mobile-robot-platform-ros2/main/docs/demos/run-1-live.mp4) and [Run 2 — 35 seconds](https://raw.githubusercontent.com/ADHU-ADHU/mobile-robot-platform-ros2/main/docs/demos/run-2-live.mp4).
 
 ## Frontier planning displays
 

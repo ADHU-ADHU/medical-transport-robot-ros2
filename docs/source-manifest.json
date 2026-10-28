@@ -119,7 +119,7 @@
       "published_sha256": "23f1d3946cf526d01b3a442645e87a7205bc17182133476bd77405d397f2d0fe",
       "changes": [
         "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; used UNLICENSED because no explicit custom-code licensing grant was supplied. Node implementation unchanged.",
-        "Updated descriptive package metadata for the medical transport project framing; control logic unchanged."
+        "Updated descriptive package metadata for the mobile robot platform description; control logic unchanged."
       ]
     },
     {
@@ -143,7 +143,7 @@
       "published_sha256": "1f38c8385b846d25d3ffc710819c619e4261691b36caad0c63ec010ba71bcccd",
       "changes": [
         "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; used UNLICENSED because no explicit custom-code licensing grant was supplied. Node implementation unchanged.",
-        "Updated descriptive package metadata for the medical transport project framing; control logic unchanged."
+        "Updated descriptive package metadata for the mobile robot platform description; control logic unchanged."
       ]
     },
     {
@@ -171,10 +171,10 @@
       "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/package.xml",
       "path": "robot/ros2_ws/src/mpu6050_ros2/package.xml",
       "original_sha256": "27df0ae8c47c59320e4dbeaa8c8428a50865400cb7563839c2e5b3233c395084",
-      "published_sha256": "0ff051f32c7bf185f21473e47fc75774bd1b1dbfe941515ae75e05eaec7dd3ba",
+      "published_sha256": "6d9c037dcf609a6cfec840c43b571a40737bd53d5298310d0c483651ac2dff3c",
       "changes": [
         "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; preserved the original MIT license declaration. Node implementation unchanged.",
-        "Updated descriptive package metadata for the medical transport project framing; control logic unchanged."
+        "Updated descriptive package metadata for the mobile robot platform description; control logic unchanged."
       ]
     },
     {
@@ -195,10 +195,10 @@
       "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/setup.py",
       "path": "robot/ros2_ws/src/mpu6050_ros2/setup.py",
       "original_sha256": "a8462908e002ead1301c5c8c6c0f7a6f5ded65fb54cfe211f01c85ef5239e80a",
-      "published_sha256": "8dd9bf2feaaf7f9aca772c66cd7dbd02fa8c50b46ffe10cce1c2193765b8e098",
+      "published_sha256": "083f209424dd0d84d8afaae15b27e23f5c4b9972bcf5e00127070e38f70e2ce6",
       "changes": [
         "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; preserved the original MIT license declaration. Node implementation unchanged.",
-        "Updated descriptive package metadata for the medical transport project framing; control logic unchanged."
+        "Updated descriptive package metadata for the mobile robot platform description; control logic unchanged."
       ]
     },
     {
