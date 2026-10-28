@@ -47,6 +47,10 @@ The original camera runs also have compact silent downloads: [Run 1 — 40 secon
 
 Startup commands reference `frontier_explorer55.py`, `a*_smooth5.py` and `path_follower5.py`. These support the recorded components without establishing byte-identical source revisions.
 
+### Dedicated hybrid exploration project
+
+Exploration is one component of this mobile robot platform. My dedicated [TurtleBot3 Hybrid Exploration with ROS 2 Jazzy](https://github.com/ADHU-ADHU/turtlebot3-hybrid-exploration-ros2) repository covers the exploration pipeline in depth: frontier selection, A* planning and smoothing, reactive LiDAR obstacle avoidance, algorithm documentation, and simulation and physical-robot results.
+
 ## SLAM in RViz2 and terminals
 
 ![Recorded occupancy-map display in RViz2](slam-rviz-preview.gif)

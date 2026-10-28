@@ -39,6 +39,10 @@ Physical robot runs alongside recorded mapping and exploration displays.
 
 *Each pair uses one playback clock, so both panels start and loop together at normal speed. Full robot runs are shown beside selected desktop windows; motion alignment is approximate because the sources have no shared timestamp.*
 
+### Dedicated hybrid exploration project
+
+Exploration is one component of this mobile robot platform. My dedicated [TurtleBot3 Hybrid Exploration with ROS 2 Jazzy](https://github.com/ADHU-ADHU/turtlebot3-hybrid-exploration-ros2) repository covers the exploration pipeline in depth: frontier selection, A* planning and smoothing, reactive LiDAR obstacle avoidance, algorithm documentation, and simulation and physical-robot results.
+
 [Full recordings and desktop previews · all seven originals, including the separate disturbance recordings →](docs/demos/README.md#all-seven-recordings)
 
 [Setup and operation](docs/setup.md) · [Architecture and topic contracts](docs/architecture.md) · [Experiments](experiments/README.md) · [Validation and limitations](docs/validation.md) · [Reflection report](docs/reports/reflection-report.pdf)
