@@ -1,6 +1,6 @@
 # Source selection and attribution
 
-This repository is curated from the author's supplied PC/robot archives and additional working workspaces. The personal reflection was used to identify the author's contributions; the wider project report supplied hardware and integration context. A public copy of the [personal reflection](reports/reflection-report.pdf) is included at the author’s request, with the cover university login removed. The wider report is not republished; its two hardware photographs are extracted separately.
+This repository is curated from the author's supplied PC/robot archives and additional working workspaces. The personal reflection was used to identify the author's contributions. A public copy of the [personal reflection](reports/reflection-report.pdf) is included at the author’s request, with the cover university login removed.
 
 ## Selected implementation
 
@@ -31,7 +31,7 @@ No new blanket open-source license is assigned to the author's code. Existing up
 
 ## Excluded material
 
-Virtual environments, build/install/log trees, caches, bag recordings, generated data, duplicate drafts and complete vendored dependency trees are omitted. Other contributors' line-following branches and the separate GPS/range-bearing estimation exercises are not presented as the author's implementation. Personal reports and original notebook outputs are not published.
+Virtual environments, build/install/log trees, caches, bag recordings, generated data, duplicate drafts and complete vendored dependency trees are omitted. Other contributors' line-following branches and the separate GPS/range-bearing estimation exercises are not presented as the author's implementation. Other personal documents and original notebook outputs are not published.
 
 ## Media
 

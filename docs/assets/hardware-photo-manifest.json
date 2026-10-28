@@ -1,25 +1,17 @@
 [
   {
     "file": "roverlink-robot.jpg",
-    "source_document": "Project Report Telerobotics group.pdf",
-    "pdf_page": 7,
-    "figure": 6,
-    "source_image": "group-page-7-image-1-x157.png",
     "width": 1600,
     "height": 1200,
-    "transform": "Native PDF embedded raster extracted; converted to JPEG quality 92, with no cropping, retouching or resizing",
+    "transform": "Converted to JPEG quality 92 at native resolution, with no cropping, retouching or resizing",
     "bytes": 256379,
     "sha256": "0cf33f75ddc7e2934be8a23b202da2bda231d65ae09ecb7f4115a866d4007cce"
   },
   {
     "file": "roverlink-hardware.jpg",
-    "source_document": "Project Report Telerobotics group.pdf",
-    "pdf_page": 3,
-    "figure": 2,
-    "source_image": "group-page-3-image-1-x103.png",
     "width": 2048,
     "height": 1528,
-    "transform": "Native PDF embedded raster extracted; converted to JPEG quality 92, with no cropping, retouching or resizing",
+    "transform": "Converted to JPEG quality 92 at native resolution, with no cropping, retouching or resizing",
     "bytes": 511923,
     "sha256": "8b2855af915ab2e2d79e4c3eea13c32ea4ff393cfc0cee5133b311265f07220e"
   }

@@ -19,7 +19,7 @@ Frontier exploration is an additional capability. A dedicated [TurtleBot3 explor
 
 <img src="docs/assets/roverlink-robot.jpg" width="680" alt="Custom-built mobile robot with enclosure and top-mounted LiDAR">
 
-*The assembled mobile robot platform. [Hardware and supplied resources](docs/hardware.md) · [Photo provenance](docs/assets/README.md).*
+*The assembled mobile robot platform. [Hardware and supplied resources](docs/hardware.md) · [Hardware photos](docs/assets/README.md).*
 
 ## Recorded demos
 

@@ -2,7 +2,7 @@
 
 ## Publication checks
 
-The source was reviewed together with the author's reflection, wider hardware report and recorded startup commands. The repository preserves the selected control algorithms; publication edits are listed in the [source manifest](source-manifest.json).
+The source was reviewed together with the author's reflection and recorded startup commands. The repository preserves the selected control algorithms; publication edits are listed in the [source manifest](source-manifest.json).
 
 - The two PC ROS packages build against the available ROS 2 Jazzy installation.
 - The two robot hardware packages also build against Jazzy; motor mixing was checked with mock writes, without importing or starting hardware nodes. The external LiDAR driver was identified and pinned, but a fresh driver build was not repeated.
@@ -40,4 +40,4 @@ Use the matching ROS distribution for your overlay. The checks require pytest, N
 
 ## Evidence scope
 
-The physical clips demonstrate robot motion in an indoor test area; they do not expose the active controller. The desktop recordings show SLAM and the exploration script names. The reflection explains the author's implemented features, including work beyond the wider report. These sources support the project narrative, but do not establish repeatability statistics, collision-free operation or a completed autonomous service deployment. No such performance claim is made here.
+The physical clips demonstrate robot motion in an indoor test area; they do not expose the active controller. The desktop recordings show SLAM and the exploration script names. The reflection explains the author's implemented features and additional experiments. These sources support the project narrative, but do not establish repeatability statistics, collision-free operation or a completed autonomous service deployment. No such performance claim is made here.
