@@ -8,8 +8,8 @@ All **seven full recordings** are linked below: two physical robot runs, two fro
 | --- | ---: | --- |
 | Physical robot · Run 1 | 0:40 | [Watch full recording](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view?usp=drivesdk) |
 | Physical robot · Run 2 | 0:35 | [Watch full recording](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view?usp=drivesdk) |
-| Frontier planning · without disturbance · Run 1 | 1:07 | [Watch full recording](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view?usp=drivesdk) |
-| Frontier planning · with disturbance | 1:18 | [Watch full recording](https://drive.google.com/file/d/1a5PYxGajpSwgzHGgYuOJLI3B1tPuujmC/view?usp=drivesdk) |
+| Frontier planning map · Run 1 · without disturbance | 1:07 | [Watch full recording](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view?usp=drivesdk) |
+| Frontier planning map · Run 2 · with disturbance | 1:18 | [Watch full recording](https://drive.google.com/file/d/1a5PYxGajpSwgzHGgYuOJLI3B1tPuujmC/view?usp=drivesdk) |
 | SLAM and terminals · without disturbance · Run 1 | 2:04 | [Watch full recording](https://drive.google.com/file/d/17GfGzLKmsFYkC4zHKYkuDDoeN6FWufPo/view?usp=drivesdk) |
 | SLAM and terminals · without disturbance · Run 2 | 1:53 | [Watch full recording](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view?usp=drivesdk) |
 | SLAM and terminals · with disturbance | 2:37 | [Watch full recording](https://drive.google.com/file/d/1yc3GqGitcGwUOFBiwv69zqKGgYtH1DC7/view?usp=drivesdk) |
@@ -25,13 +25,16 @@ All **seven full recordings** are linked below: two physical robot runs, two fro
 
 These clips show the physical platform moving around furniture. The camera footage alone does not identify the active controller or distinguish teleoperation from autonomous motion. The GIFs show source seconds 5–15 of Run 1 and 7–17 of Run 2. The MP4s retain the full supplied video duration and framing; audio has been removed.
 
-## Frontier planning display
+## Frontier planning displays
 
-![Recorded PC frontier clusters, robot pose and selected goal](frontier-planning-preview.gif)
+| Run 1 | Run 2 · disturbance recording |
+| :---: | :---: |
+| <img src="frontier-planning-preview.gif" width="300" alt="Run 1 frontier map preview"> | <img src="frontier-planning-run-2-preview.gif" width="300" alt="Run 2 frontier map preview"> |
+| [Watch Run 1 frontier map](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) | [Watch Run 2 frontier map](https://drive.google.com/file/d/1a5PYxGajpSwgzHGgYuOJLI3B1tPuujmC/view) |
 
-[Watch without disturbance · Run 1](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view?usp=drivesdk) · [Watch with disturbance](https://drive.google.com/file/d/1a5PYxGajpSwgzHGgYuOJLI3B1tPuujmC/view?usp=drivesdk)
+The author identifies `frontier_exploration_no_distrubance_run1.webm` as Run 1's frontier view and `Frontier_explorer_with_disturbance.webm` as Run 2's frontier view. The front page places each beside its corresponding physical run. The excerpts retain normal speed and are not synchronized with the camera clips. Exact excerpt windows are in the [prepared media manifest](prepared-media-manifest.json).
 
-The preview is an 18-second crop of the frontier plot from the first recording, source seconds 14–32. Startup commands reference `frontier_explorer55.py`, `a*_smooth5.py` and `path_follower5.py`. This supports the recorded components; it does not establish the exact source revision used in every robot run. These desktop captures and the physical robot clips are separate recordings, with no verified synchronization.
+Startup commands reference `frontier_explorer55.py`, `a*_smooth5.py` and `path_follower5.py`. These support the recorded components without establishing byte-identical source revisions.
 
 ## SLAM in RViz2 and terminals
 

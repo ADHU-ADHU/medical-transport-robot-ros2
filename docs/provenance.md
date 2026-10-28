@@ -1,6 +1,6 @@
 # Source selection and attribution
 
-This repository is curated from the author's supplied PC/robot archives and additional working workspaces. The personal reflection was used to identify the author's contributions; the wider project report supplied hardware and integration context. Neither report is republished.
+This repository is curated from the author's supplied PC/robot archives and additional working workspaces. The personal reflection was used to identify the author's contributions; the wider project report supplied hardware and integration context. A public copy of the [personal reflection](reports/reflection-report.pdf) is included at the author’s request, with the cover university login removed. The wider report is not republished; its two hardware photographs are extracted separately.
 
 ## Selected implementation
 

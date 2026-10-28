@@ -85,6 +85,26 @@
       "sha256": "55328fb27877b8fc1d2d9c13585a15c6c10c701efad16e443992a4d845fef8d4",
       "source_sha256": "aaf30dbb32d022cc02d8b0d5c5dae9be818072aedbffc7a7beb075880fe24cd8",
       "source_bytes": 10797101
+    },
+    {
+      "file": "frontier-planning-run-2-preview.gif",
+      "source": "Frontier_explorer_with_disturbance.webm",
+      "source_start_seconds": 14,
+      "source_duration_seconds": 18,
+      "filter": "crop=780:610:25:25,fps=6,scale=480:-1:flags=lanczos",
+      "speed": 1.0,
+      "audio": "not included",
+      "encoding": "GIF,96-color palette,Bayer dithering",
+      "bytes": 739220,
+      "sha256": "7c0e17276cc3d6fe79a5c78bd6d32b532f3d4644b51e9cf2666ea0d6b7990c9e",
+      "source_sha256": "94a7a2f4615a4f6c63fa516508127a86e644277eff487d20988a58eac491fef7",
+      "source_bytes": 16643712,
+      "width": 480,
+      "height": 375,
+      "frames": 108,
+      "output_duration_seconds": 18.0,
+      "user_identified_run": "Run 2 frontier cluster/map recording",
+      "timing_note": "Normal-speed source excerpt. Pairing with the physical Run 2 footage does not establish frame-level synchronization."
     }
   ]
 }

@@ -6,26 +6,28 @@ RoverLink connects an operator PC to a mobile robot for joystick driving, record
 
 The project explores a practical question: after an operator teaches a route, how can a robot follow it back while reacting to obstacles? A separate exploration mode selects frontiers, plans through an occupancy grid and tracks the resulting path.
 
+Frontier exploration is one part of the broader teleoperation and return workflow. A dedicated [TurtleBot3 exploration project using ROS 2 Jazzy](https://github.com/ADHU-ADHU/turtlebot3-hybrid-exploration-ros2) is also available.
+
 <img src="docs/assets/roverlink-robot.jpg" width="680" alt="Finished differential-drive robot with its top-mounted LiDAR and enclosed electronics">
 
 *The finished robot platform. [Hardware photos and source details](docs/assets/README.md).*
 
 ## Recorded demos
 
-| Physical robot · Run 1 | Physical robot · Run 2 |
+| Physical robot | Frontier planning map |
 | :---: | :---: |
-| ![Run 1: robot moving through the indoor test area](docs/demos/run-1-preview.gif) | ![Run 2: a second indoor robot run](docs/demos/run-2-preview.gif) |
-| [Watch Run 1](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) | [Watch Run 2](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) |
+| **Run 1** | **Run 1** |
+| ![Run 1: physical robot](docs/demos/run-1-preview.gif) | <img src="docs/demos/frontier-planning-preview.gif" width="320" alt="Run 1 frontier clusters and planned path"> |
+| [Watch Run 1](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) | [Watch Run 1 frontier map](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) |
+| **Run 2** | **Run 2 · disturbance recording** |
+| ![Run 2: physical robot](docs/demos/run-2-preview.gif) | <img src="docs/demos/frontier-planning-run-2-preview.gif" width="320" alt="Run 2 frontier clusters and planned path from the disturbance recording"> |
+| [Watch Run 2](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) | [Watch Run 2 frontier map](https://drive.google.com/file/d/1a5PYxGajpSwgzHGgYuOJLI3B1tPuujmC/view) |
 
-### Frontier planning
+*Corresponding robot and frontier views for each run. Previews play independently at normal speed.*
 
-![Recorded frontier selection and path-planning display](docs/demos/frontier-planning-preview.gif)
+[Full recordings and desktop previews · all seven videos →](docs/demos/README.md#all-seven-recordings)
 
-[Watch full frontier planning](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view?usp=drivesdk) · [Watch all seven recordings →](docs/demos/README.md#all-seven-recordings)
-
-*The robot runs and frontier-planning display are separate recordings, shown at normal speed.*
-
-[Setup and operation](docs/setup.md) · [Architecture and topic contracts](docs/architecture.md) · [Experiments](experiments/README.md) · [Validation and limitations](docs/validation.md)
+[Setup and operation](docs/setup.md) · [Architecture and topic contracts](docs/architecture.md) · [Experiments](experiments/README.md) · [Validation and limitations](docs/validation.md) · [Reflection report](docs/reports/reflection-report.pdf)
 
 ## What I built
 
@@ -33,10 +35,14 @@ The project explores a practical question: after an operator teaches a route, ho
 - **Teach-and-return control:** record the driven pose history, reverse and subsample it, then track waypoints toward the origin.
 - **LiDAR obstacle handling:** turn/drive avoidance states, path rejoining, hysteresis, minimum turn duration and cooldown tuning.
 - **Frontier exploration:** cluster frontier candidates, plan with inflated-grid A*, shorten paths with Bresenham line-of-sight checks, smooth them with a moving average and track them with local obstacle handling.
-- **Experiments:** Gaussian smoothing of recorded routes, gyro/encoder heading fusion, and an exploratory multi-stop route solver.
+- **Experiments:** Gaussian smoothing of recorded routes, gyro/encoder heading fusion, and an [OR-Tools TSP prototype for multi-stop routing](experiments/multi_stop/tsp_prototype.py).
 - **PC/robot integration:** Wi-Fi ROS communication, a pose-to-TF bridge, and SLAM configuration and tuning alongside the wider robot integration work.
 
 **Author:** Adhithya Palanisamy Chandrasekaran. This repository presents my control and planning work. SLAM Toolbox and the LD LiDAR driver are external components; their algorithms are not claimed as my implementation. See [source provenance and dependencies](docs/provenance.md).
+
+### Multi-stop routing with OR-Tools
+
+The [TSP prototype](experiments/multi_stop/tsp_prototype.py) takes entered waypoints, builds an OR-Tools routing model and passes the selected visit order to a differential-drive follower. It is a separate experiment with known distance-precision and route-handling limits, documented in the [experiment notes](experiments/README.md); it is not part of the recorded return-control chain.
 
 ## How the two sides fit together
 

@@ -28,7 +28,8 @@
         "allow_file_discovery": false,
         "permissions_changed": false,
         "match_basis": "Exact source filename and byte size"
-      }
+      },
+      "author_identified_run": 2
     },
     {
       "source": "Run1_video.mp4",
@@ -66,7 +67,8 @@
         "allow_file_discovery": false,
         "permissions_changed": false,
         "match_basis": "Exact source filename and byte size"
-      }
+      },
+      "author_identified_run": 1
     },
     {
       "source": "Run2_video.mp4",
@@ -104,7 +106,8 @@
         "allow_file_discovery": false,
         "permissions_changed": false,
         "match_basis": "Exact source filename and byte size"
-      }
+      },
+      "author_identified_run": 2
     },
     {
       "source": "frontier_exploration_no_distrubance_run1.webm",
@@ -132,7 +135,8 @@
         "allow_file_discovery": false,
         "permissions_changed": false,
         "match_basis": "Exact source filename and byte size"
-      }
+      },
+      "author_identified_run": 1
     },
     {
       "source": "frontier_exploration_no_disturbance_run1.webm",
@@ -218,5 +222,6 @@
         "match_basis": "Exact source filename and byte size"
       }
     }
-  ]
+  ],
+  "pairing_note": "The author identified the two frontier-map recordings as corresponding to physical Runs 1 and 2. Independently recorded previews are not time-synchronized."
 }
