@@ -8,18 +8,18 @@ The goal is to build a working mobile robot from individual hardware components 
 | --- | --- |
 | Raspberry Pi 4 | Onboard ROS 2 computer connected to the motor controller and sensors |
 | MD25 dual motor controller | Receives left/right motor demands over I2C bus 1 at address `0x58` |
-| Two EMG30 motors with encoders | Propulsion and wheel-displacement feedback; the model is identified in the supplied hardware inventory |
+| Two EMG30 motors with encoders | Propulsion and wheel-displacement feedback |
 | LDROBOT 2D LiDAR | Laser scans for operator feedback, mapping and local obstacle handling; the supplied launch profile selects **LD06**, 230400 baud and `/dev/ttyAMA0` |
 | MPU-series IMU | Gyro heading input; the published node uses the **MPU6050** interface at I2C address `0x68` |
 | Operator PC and Wi-Fi network | Remote input, ROS 2 communication, SLAM/visualization and return-control coordination |
 
-The reference material names different sensor models in different places. `2025Telerobotics_Lab4.pdf`, page 2, lists **LD19** and **MPU9250** in the equipment inventory, while its implementation tasks name **LD06** and **MPU6050**. The published configuration follows the supplied LD06 launch file and MPU6050 node. These are the software targets; the footage does not expose legible model labels that independently resolve the inventory difference.
+The published software targets the **LD06** and **MPU6050** interfaces. Confirm the installed sensor models, serial connection and I2C wiring before selecting drivers.
 
 The pose node assumes a 0.10 m wheel diameter, 0.35 m wheel separation and 360 encoder ticks per revolution. These are calibration values in the code and should be checked for the actual assembly. The selected node publishes both gyro-heading/encoder position and an encoder-only comparison pose. See [robot setup](../robot/README.md) for topic units, launch commands and hardware-access requirements.
 
-## Provided hardware resources
+## Hardware and development resources
 
-The following inventory comes from `2025Telerobotics_Lab4.pdf`, pages 2-3. It records resources made available for building the platform. **Provisioning does not mean every item was integrated into the published software or demonstrated workflow.**
+The following resources were available for building the platform. The selected implementation above identifies the interfaces used by the published software; the list below also includes supporting equipment and components for further integration.
 
 | Group | Provided items |
 | --- | --- |
@@ -29,11 +29,3 @@ The following inventory comes from `2025Telerobotics_Lab4.pdf`, pages 2-3. It re
 | Development boards and assembly tools | ESP32 Huzzah (M65); Arduino Uno and USB cables; two breadboards; jumper cables; screwdriver; double-sided tape; cable ties and cable tape; scissors and Post-it notes |
 
 The example equipment-delivery brief also considers arrival indication and payload handling. The curated implementation does not establish completed buzzer, flashing-light or parcel-release integration. Those components belong to the broader platform resources and future integration scope.
-
-## Drive-model detail
-
-`2025Telerobotics_Projektdirective20251104.pdf`, page 3, explicitly specifies a differential-drive platform in its real-vehicle requirements. The selected controller mixes forward and turn demands into two wheel commands, and the encoder model estimates heading change from the difference between right and left wheel displacement. This is the motion model used by the supplied control and estimation code.
-
-The project centers on building and integrating a working mobile robot, including teleoperation and commanded return. The supplied material does not identify a commercial chassis model. The example delivery scenario motivated the control requirements; the hardware resources supported assembly, sensor bring-up and integration.
-
-The handouts named above were used as reference context and are not included in this repository.

@@ -34,12 +34,4 @@ Medical-equipment transport through hospital corridors is an example motivation 
 
 That example also describes arrival indication with a buzzer/light and parcel release. The selected published modules do not implement those functions; related signaling and switch components appear in the supplied resource list. The prototype is not presented as a clinically deployed delivery system.
 
-## Reference context
-
-These documents were supplied to clarify the project and equipment; they are not republished here:
-
-- **2025Telerobotics_Projektdirective20251104.pdf:** page 1 uses a medical-transport scenario to motivate teleoperation and commanded return; pages 2–3 specify teleoperator, controller, estimator and physical-vehicle requirements; page 8 describes staged corridor benchmark areas. Its numbered doorways define test boundaries, not implemented delivery destinations.
-- **2025Telerobotics_ProjectDiscussions.pdf:** slide 18 summarizes teleoperation, estimation, sensor feedback and benchmark work within the wider project process.
-- **2025Telerobotics_Lab4.pdf:** pages 1–2 cover direct/shared control, dead reckoning and telecommands; pages 2–3 list the provided hardware and bench resources.
-
-The [personal reflection report](reports/reflection-report.pdf) and source manifest document the author's implementation context. Requirements in the reference material are not treated as proof that a feature was completed.
+For implementation details and development experience, see the [personal reflection report](reports/reflection-report.pdf) and [source manifest](source-manifest.json).

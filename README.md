@@ -112,7 +112,7 @@ Return control is placed on the PC in this layout; it has no direct hardware dep
 | Wi-Fi access point | ROS DDS communication between PC and robot |
 | Power and supporting hardware | 12 V battery, USB power resources and emergency-stop hardware listed in the supplied equipment |
 
-*The software targets MPU6050 and LD06 interfaces. The Lab 4 equipment list names MPU9250 and LD19, while its tasks also use MPU6050 and LD06. [Hardware notes](docs/hardware.md) distinguish the supplied inventory from the published configuration and list the additional tools, power, development boards and signaling resources.*
+*The published software targets MPU6050 and LD06 interfaces. [Hardware notes](docs/hardware.md) cover sensor configuration, power, networking and additional development resources.*
 
 ## Repository map
 

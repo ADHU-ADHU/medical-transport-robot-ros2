@@ -278,19 +278,5 @@
   },
   "coverage_note": "Counts describe robot hardware subset review; return control and selected Gaussian/TSP experiments are also published in PC/experiments directories. Generated outputs, unrelated branches and complete upstream dependency sources are excluded.",
   "publication_additions": "Package wrappers, documentation, synthetic checks and media manifests are new. Media provenance is recorded in docs/demos and docs/assets.",
-  "license_note": "Preserved the original MPU6050 package MIT declarations in setup.py and package.xml. Original MD25 package metadata had TODO/unspecified licensing, so its publication metadata uses UNLICENSED. Both upstream LDROBOT MIT notices are preserved exactly.",
-  "project_context_sources": [
-    {
-      "file": "2025Telerobotics_Projektdirective20251104.pdf",
-      "use": "Mission scenario and system requirements; pages 1-3 and 8. Reference only; not republished."
-    },
-    {
-      "file": "2025Telerobotics_ProjectDiscussions.pdf",
-      "use": "Wider system roles, feedback and evaluation context; slide 18. Reference only; not republished."
-    },
-    {
-      "file": "2025Telerobotics_Lab4.pdf",
-      "use": "Control foundation and supplied hardware/resources; pages 1-3. Reference only; not republished."
-    }
-  ]
+  "license_note": "Preserved the original MPU6050 package MIT declarations in setup.py and package.xml. Original MD25 package metadata had TODO/unspecified licensing, so its publication metadata uses UNLICENSED. Both upstream LDROBOT MIT notices are preserved exactly."
 }
