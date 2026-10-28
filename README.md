@@ -1,30 +1,39 @@
-# RoverLink · Teleoperation, Teach-and-Return & Exploration
+# ROS 2 Medical Transport Robot
 
-**ROS 2 · Differential-drive robot · Wi-Fi DDS · LiDAR · A-star · Python**
+**Teleoperation · Return to Base · LiDAR/IMU Feedback · ROS 2 · Python**
 
-RoverLink connects an operator PC to a mobile robot for joystick driving, recorded-route return and frontier exploration. The PC handles user input, planning, SLAM and visualization; the robot handles motors, encoders, IMU and LiDAR. The two sides exchange ROS topics over Wi-Fi.
+A custom-built mobile robot prototype for transporting medical equipment through hospital-like indoor environments. An operator remotely drives the robot with joystick commands and live sensor feedback, then commands it to return to its starting point.
 
-The project explores a practical question: after an operator teaches a route, how can a robot follow it back while reacting to obstacles? A separate exploration mode selects frontiers, plans through an occupancy grid and tracks the resulting path.
+The PC provides the operator interface, mapping and visualization. The onboard Raspberry Pi handles motor commands, wheel encoders, inertial sensing and LiDAR. ROS 2 connects both sides over Wi-Fi.
 
-Frontier exploration is one part of the broader teleoperation and return workflow. A dedicated [TurtleBot3 exploration project using ROS 2 Jazzy](https://github.com/ADHU-ADHU/turtlebot3-hybrid-exploration-ros2) is also available.
+## Core transport workflow
 
-<img src="docs/assets/roverlink-robot.jpg" width="680" alt="Finished differential-drive robot with its top-mounted LiDAR and enclosed electronics">
+1. **Drive remotely:** the operator controls travel using live LiDAR, pose and map feedback.
+2. **Record the route:** encoder and gyro-based pose estimates retain the driven trajectory.
+3. **Command return to base:** manual publishing pauses and the return controller follows the recorded route back toward the start.
+4. **Handle obstacles locally:** LiDAR-based turn/drive avoidance attempts to rejoin the return path.
 
-*The finished robot platform. [Hardware photos and source details](docs/assets/README.md).*
+The main project is teleoperated transport with commanded return. Frontier exploration is an additional capability; a dedicated [TurtleBot3 exploration implementation using ROS 2 Jazzy](https://github.com/ADHU-ADHU/turtlebot3-hybrid-exploration-ros2) is available separately. See [project context and implementation coverage](docs/project-context.md) for the wider transport scenario and what this repository implements.
+
+<img src="docs/assets/roverlink-robot.jpg" width="680" alt="Custom-built medical transport robot prototype with enclosure and top-mounted LiDAR">
+
+*The assembled transport robot prototype. [Hardware and supplied resources](docs/hardware.md) · [Photo provenance](docs/assets/README.md).*
 
 ## Recorded demos
+
+Physical robot and mapping/exploration trials from the wider transport-control project.
 
 ### Run 1 · Robot and frontier planning
 
 ![Run 1 physical robot and frontier map playing together](docs/demos/run-1-robot-frontier.gif)
 
-[Watch original robot video](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) · [Watch full frontier recording](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/roverlink-ros2/main/docs/demos/run-1-robot-frontier.mp4)
+[Watch original robot video](https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view) · [Watch full frontier recording](https://drive.google.com/file/d/1N3GdqE0HkIV_c7-GcsQj2JF_T-2GK5UM/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-1-robot-frontier.mp4)
 
 ### Run 2 · Robot and SLAM
 
 ![Run 2 physical robot and SLAM map playing together](docs/demos/run-2-robot-slam.gif)
 
-[Watch original robot video](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) · [Watch full SLAM recording](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/roverlink-ros2/main/docs/demos/run-2-robot-slam.mp4)
+[Watch original robot video](https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view) · [Watch full SLAM recording](https://drive.google.com/file/d/1JzWEIaSQ2RWp_wPCHWGMkrtPHqy_iAXB/view) · [Download paired MP4](https://raw.githubusercontent.com/ADHU-ADHU/medical-transport-robot-ros2/main/docs/demos/run-2-robot-slam.mp4)
 
 *Each pair uses one playback clock, so both panels start and loop together at normal speed. Full robot runs are shown beside selected desktop windows; motion alignment is approximate because the sources have no shared timestamp.*
 
@@ -37,15 +46,18 @@ Frontier exploration is one part of the broader teleoperation and return workflo
 - **Joystick teleoperation and handover:** pygame input, normalized drive commands, debounced return trigger and a stop burst before manual publishing pauses.
 - **Teach-and-return control:** record the driven pose history, reverse and subsample it, then track waypoints toward the origin.
 - **LiDAR obstacle handling:** turn/drive avoidance states, path rejoining, hysteresis, minimum turn duration and cooldown tuning.
-- **Frontier exploration:** cluster frontier candidates, plan with inflated-grid A*, shorten paths with Bresenham line-of-sight checks, smooth them with a moving average and track them with local obstacle handling.
-- **Experiments:** Gaussian smoothing of recorded routes, gyro/encoder heading fusion, and an [OR-Tools TSP prototype for multi-stop routing](experiments/multi_stop/tsp_prototype.py).
 - **PC/robot integration:** Wi-Fi ROS communication, a pose-to-TF bridge, and SLAM configuration and tuning alongside the wider robot integration work.
 
 **Author:** Adhithya Palanisamy Chandrasekaran. This repository presents my control and planning work. SLAM Toolbox and the LD LiDAR driver are external components; their algorithms are not claimed as my implementation. See [source provenance and dependencies](docs/provenance.md).
 
-### Multi-stop routing with OR-Tools
+## Additional work and experiments
 
-The [TSP prototype](experiments/multi_stop/tsp_prototype.py) takes entered waypoints, builds an OR-Tools routing model and passes the selected visit order to a differential-drive follower. It is a separate experiment with known distance-precision and route-handling limits, documented in the [experiment notes](experiments/README.md); it is not part of the recorded return-control chain.
+- **Frontier exploration:** frontier clustering, inflated-grid A*, line-of-sight shortcutting, moving-average smoothing and local path tracking. This is an extension to the transport project.
+- **Route smoothing:** a separate Gaussian-filtered return experiment.
+- **Heading fusion:** scalar and heading/gyro-bias Kalman-filter notebook variants, separate from the main pose node.
+- **Multi-stop routing:** an [OR-Tools TSP prototype](experiments/multi_stop/tsp_prototype.py) orders entered waypoints and passes them to a motor-control follower. It has known distance-precision and route-handling limitations and is separate from the recorded return-control chain.
+
+[Experiment details and current limits →](experiments/README.md)
 
 ## How the two sides fit together
 
@@ -85,15 +97,16 @@ Return control is placed on the PC in this layout; it has no direct hardware dep
 
 | Component | Role |
 | --- | --- |
-| Raspberry Pi 4, 2 GB | Onboard ROS nodes and hardware interfaces |
-| MD25 dual motor controller | I²C differential-drive commands and encoder access |
+| Raspberry Pi 4 | Onboard ROS nodes and hardware interfaces |
+| MD25 dual motor controller | I²C control of the two motors and encoder access |
 | Two EMG30 geared motors with encoders | Drive and wheel-displacement measurement |
-| MPU6050 IMU | Angular-rate input and integrated heading |
-| LDROBOT 2D LiDAR, LD06 launch profile | `/scan` for SLAM and local obstacle handling |
+| MPU-series IMU | Angular-rate input and heading; the supplied node uses the MPU6050 interface |
+| LDROBOT 2D LiDAR | Live scans for operator feedback, mapping and obstacle handling; LD06 software profile included |
 | Operator PC and game controller | Joystick input, planning, SLAM and visualization |
-| Wi-Fi | ROS DDS communication between PC and robot |
+| Wi-Fi access point | ROS DDS communication between PC and robot |
+| Power and supporting hardware | 12 V battery, USB power resources and emergency-stop hardware listed in the supplied equipment |
 
-*Assembly photo from the shared platform documentation; this portfolio focuses on my software contributions. The driver configuration and recorded commands use the LD06 profile; the wider report also refers to LD19, so the exact sensor model should be checked against the physical unit before reproducing the wiring.*
+*The software targets MPU6050 and LD06 interfaces. The Lab 4 equipment list names MPU9250 and LD19, while its tasks also use MPU6050 and LD06. [Hardware notes](docs/hardware.md) distinguish the supplied inventory from the published configuration and list the additional tools, power, development boards and signaling resources.*
 
 ## Repository map
 

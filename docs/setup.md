@@ -2,13 +2,15 @@
 
 ## Environment
 
+The public project name is ROS 2 Medical Transport Robot. The internal package identifier `roverlink_control` is retained to keep the documented ROS commands and source mappings reproducible.
+
 The original platform uses ROS 2 Humble on a PC and Raspberry Pi 4, with MD25/EMG30 drive, MPU6050 and an LD LiDAR configured through the LD06 launch profile. Keep both machines on the same ROS distribution and network for reproduction. A local Jazzy build check is recorded in [validation](validation.md); it is not a robot test.
 
 Clone on both machines:
 
 ```bash
-git clone https://github.com/ADHU-ADHU/roverlink-ros2.git
-cd roverlink-ros2
+git clone https://github.com/ADHU-ADHU/medical-transport-robot-ros2.git
+cd medical-transport-robot-ros2
 ```
 
 Set these in every terminal on both machines, replacing `humble` only for a deliberately ported setup:
@@ -80,8 +82,8 @@ In RViz2 choose `map` as the fixed frame and add TF, `/map`, `/scan`, and option
 Do not run the frontier path follower in this mode. Start the return controller **before** teaching the route so it records the complete pose history. Use a dedicated writable directory for its JSON outputs:
 
 ```bash
-mkdir -p ~/roverlink-runtime
-cd ~/roverlink-runtime
+mkdir -p ~/medical-transport-runtime
+cd ~/medical-transport-runtime
 ros2 run roverlink_control return_controller --ros-args -p avoid_turn_sign:=-1.0
 ```
 

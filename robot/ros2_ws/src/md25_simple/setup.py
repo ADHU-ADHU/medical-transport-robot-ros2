@@ -14,7 +14,7 @@ setup(
     zip_safe=True,
     maintainer='Adhithya Palanisamy Chandrasekaran',
     maintainer_email='130308572+ADHU-ADHU@users.noreply.github.com',
-    description='Normalized ROS 2 motor command receiver for the MD25 differential-drive controller.',
+    description='Normalized ROS 2 motor command receiver for the MD25 two-motor controller.',
     license='UNLICENSED',
     entry_points={
         'console_scripts': ['md25_controller = md25_simple.md25_controller:main'],

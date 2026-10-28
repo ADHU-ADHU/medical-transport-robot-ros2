@@ -15,7 +15,7 @@ setup(
     zip_safe=True,
     maintainer='Adhithya Palanisamy Chandrasekaran',
     maintainer_email='130308572+ADHU-ADHU@users.noreply.github.com',
-    description='MPU6050 heading and encoder-based pose publishing for the RoverLink robot.',
+    description='MPU6050 heading and encoder-based pose publishing for the medical transport robot.',
     license='MIT',
     entry_points={
         'console_scripts': ['mpu6050_node = mpu6050_ros2.mpu6050_node:main'],

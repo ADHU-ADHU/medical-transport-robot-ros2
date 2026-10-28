@@ -2,7 +2,7 @@
 <package format="3">
   <name>mpu6050_ros2</name>
   <version>0.0.1</version>
-  <description>MPU6050 heading and encoder-based pose publishing for the RoverLink robot.</description>
+  <description>MPU6050 heading and encoder-based pose publishing for the medical transport robot.</description>
   <maintainer email="130308572+ADHU-ADHU@users.noreply.github.com">Adhithya Palanisamy Chandrasekaran</maintainer>
   <license>MIT</license>
   <buildtool_depend>ament_python</buildtool_depend>

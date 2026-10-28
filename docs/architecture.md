@@ -1,5 +1,7 @@
 # Architecture and interfaces
 
+The application is teleoperated medical transport with commanded return to base. The core ROS deployment links an operator PC to the vehicle's onboard motor and sensor services. Frontier exploration is a separate operating mode. [Project context](project-context.md) describes the wider mission and implementation coverage.
+
 ## Deployment
 
 The operator PC and robot share a ROS domain over Wi-Fi. The recorded setup uses domain **10**. Both machines need compatible ROS middleware, mutual network reachability and synchronized startup frames. The source was developed on ROS 2 Humble.
