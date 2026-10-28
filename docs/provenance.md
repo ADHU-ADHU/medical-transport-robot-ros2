@@ -1,6 +1,6 @@
 # Source selection and attribution
 
-This repository is curated from the author's supplied PC/robot archives and additional working workspaces. The personal reflection was used to identify the author's contributions. A public copy of the [personal reflection](reports/reflection-report.pdf) is included at the author’s request, with the cover university login removed.
+This repository is curated from the author's supplied PC/robot archives and additional working workspaces. The personal reflection was used to identify the author's contributions. A public copy of the [personal reflection](reports/reflection-report.pdf) is included at the author’s request, with the cover university login and two external hyperlinks removed.
 
 ## Selected implementation
 

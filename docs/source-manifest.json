@@ -249,9 +249,10 @@
       "source": "supplied Telerobotics folder: Telerobotics_Reflection_report.pdf",
       "path": "docs/reports/reflection-report.pdf",
       "original_sha256": "28a06915abbc3c488caa1f09667c09f9e52383089632f137788eb339393c0daa",
-      "published_sha256": "61d07bbb3bdf2aa223c114ddc4c5b891d3689857ffc00b5976978bdb914a45b9",
+      "published_sha256": "5e33753571b0c8b6d7602d5f92a5b8eb6c8740ee25573024a0c9b82aba02acf0",
       "changes": [
-        "Removed only the cover university login label and value from the PDF text-showing operations; no white overlay."
+        "Removed only the cover university login label and value from the PDF text-showing operations; no white overlay.",
+        "Removed two external hyperlink annotations; visible page content and prior cover-login removal preserved."
       ]
     }
   ],
