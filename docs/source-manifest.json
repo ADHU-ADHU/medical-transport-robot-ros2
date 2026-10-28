@@ -1,0 +1,269 @@
+{
+  "format_version": 1,
+  "source_sets": {
+    "supplied-pc-archive": "Telerobotics/asus pc side ros2/pcsideros2_ws.zip",
+    "supplied-robot-archive": "Telerobotics/robotside_car.zip (reviewed; superseded by matching working packages)",
+    "additional-pc-workspace": "ros2_ws shared by author",
+    "additional-robot-workspace": "ros2 tele files shared by author"
+  },
+  "selection": "Selected by implemented behavior and recorded commands; no exact video/source revision guarantee. Original files were not modified.",
+  "files": [
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/teleop_joy55.py",
+      "path": "pc/ros2_ws/src/roverlink_control/roverlink_control/teleop_joystick.py",
+      "original_sha256": "5b40ee6534957ccf2f34350f91cd6aa18996d1d197d18be4cd95bf288095289d",
+      "published_sha256": "5b40ee6534957ccf2f34350f91cd6aa18996d1d197d18be4cd95bf288095289d",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/gaussion_return555.py",
+      "path": "pc/ros2_ws/src/roverlink_control/roverlink_control/return_controller.py",
+      "original_sha256": "8c19b81f148e71cf45ce6eb784faa6c11535b177d0ec3972e725f450f8d3090f",
+      "published_sha256": "8c19b81f148e71cf45ce6eb784faa6c11535b177d0ec3972e725f450f8d3090f",
+      "changes": []
+    },
+    {
+      "source": "additional-pc-workspace/ros2_ws/src/frontier_explorer55.py",
+      "path": "pc/ros2_ws/src/roverlink_control/roverlink_control/frontier_selector.py",
+      "original_sha256": "f7c4b1cc7eff5ea2fb10ae718fb9404c1ab192035130f1c52e91356b9ddda5a0",
+      "published_sha256": "f7c4b1cc7eff5ea2fb10ae718fb9404c1ab192035130f1c52e91356b9ddda5a0",
+      "changes": []
+    },
+    {
+      "source": "additional-pc-workspace/ros2_ws/src/a*_smooth5.py",
+      "path": "pc/ros2_ws/src/roverlink_control/roverlink_control/astar_planner.py",
+      "original_sha256": "8e53cc92c9f3ed3bb01faa2b82112470f553da076141fbc1e1a4c1905a4e98e2",
+      "published_sha256": "8e53cc92c9f3ed3bb01faa2b82112470f553da076141fbc1e1a4c1905a4e98e2",
+      "changes": []
+    },
+    {
+      "source": "additional-pc-workspace/ros2_ws/src/path_follower5.py",
+      "path": "pc/ros2_ws/src/roverlink_control/roverlink_control/path_follower.py",
+      "original_sha256": "0fc2b26feb3acf614dd2f00857f29ac23fb0dd86498b67a6d5f8102bc17c301c",
+      "published_sha256": "bce44df48eebc3634ad0b1c15522340759fe9c7678607dae0ed717c93dcee16a",
+      "changes": [
+        "Change frontier-goal subscription and callback from PointStamped to PoseStamped, matching the selector and planner; update corresponding import/docstring and field access."
+      ]
+    },
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/robot_slam_bringup/config/slam_params.yaml",
+      "path": "pc/ros2_ws/src/robot_slam_bringup/config/slam_params.yaml",
+      "original_sha256": "4af0a9d312dbe41c5e85aa4e17092f16d11167a7b1d1ddbcda3f0beb30c3ea05",
+      "published_sha256": "4af0a9d312dbe41c5e85aa4e17092f16d11167a7b1d1ddbcda3f0beb30c3ea05",
+      "changes": []
+    },
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/robot_slam_bringup/package.xml",
+      "path": "pc/ros2_ws/src/robot_slam_bringup/package.xml",
+      "original_sha256": "240f37d5a740e566c1058591882e18b96c7ec491bdecd19642cb7d307c8c57a8",
+      "published_sha256": "cf40eba33ea93eae6d2aa86ceaeff0403b55d581bbb6d7b094e07fa5c0b7885f",
+      "changes": [
+        "Replace placeholder maintainer/description/license metadata; declare ament_python and actual runtime dependencies; remove generated lint-test declarations."
+      ]
+    },
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/robot_slam_bringup/resource/robot_slam_bringup",
+      "path": "pc/ros2_ws/src/robot_slam_bringup/resource/robot_slam_bringup",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/robot_slam_bringup/robot_slam_bringup/__init__.py",
+      "path": "pc/ros2_ws/src/robot_slam_bringup/robot_slam_bringup/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/robot_slam_bringup/robot_slam_bringup/pose2d_to_tf.py",
+      "path": "pc/ros2_ws/src/robot_slam_bringup/robot_slam_bringup/pose2d_to_tf.py",
+      "original_sha256": "4625a3eb6fe7a829de416d0b0cdc6408d466415ff74d5c943633562b848d0b40",
+      "published_sha256": "4625a3eb6fe7a829de416d0b0cdc6408d466415ff74d5c943633562b848d0b40",
+      "changes": []
+    },
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/robot_slam_bringup/setup.cfg",
+      "path": "pc/ros2_ws/src/robot_slam_bringup/setup.cfg",
+      "original_sha256": "aa136a0843a66bdede025a6e2976312909c5cd0d0ac5bde36da9151ce4a5d48f",
+      "published_sha256": "aa136a0843a66bdede025a6e2976312909c5cd0d0ac5bde36da9151ce4a5d48f",
+      "changes": []
+    },
+    {
+      "source": "supplied-pc-archive/ros2_ws/src/robot_slam_bringup/setup.py",
+      "path": "pc/ros2_ws/src/robot_slam_bringup/setup.py",
+      "original_sha256": "eeddeb2e5ace6f5f48f1ac95cf29edfa43e65c2454a585a97bb8ae438fbdb7cf",
+      "published_sha256": "e5fcfec24ef1c9a39a33fbd92ab89d2dae6ee70941449c16555e10a3ccd93a14",
+      "changes": [
+        "Install config/*.yaml; replace placeholder maintainer/description/license metadata."
+      ]
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/md25_simple/md25_simple/__init__.py",
+      "path": "robot/ros2_ws/src/md25_simple/md25_simple/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/md25_simple/md25_simple/md25_controller.py",
+      "path": "robot/ros2_ws/src/md25_simple/md25_simple/md25_controller.py",
+      "original_sha256": "5902567a594615cce6189671054ccc6b3d4e9edca87da01a9fc61de117167791",
+      "published_sha256": "5902567a594615cce6189671054ccc6b3d4e9edca87da01a9fc61de117167791",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/md25_simple/package.xml",
+      "path": "robot/ros2_ws/src/md25_simple/package.xml",
+      "original_sha256": "1381442be9af287573c0d0bc30a139f216908c77cf4943daba1e32fb91bdb1be",
+      "published_sha256": "03c9391d020a2500d5ecb10e74f7f50ba091641ac77d3c6a451e1f06dac6202b",
+      "changes": [
+        "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; used UNLICENSED because no explicit custom-code licensing grant was supplied. Node implementation unchanged."
+      ]
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/md25_simple/resource/md25_simple",
+      "path": "robot/ros2_ws/src/md25_simple/resource/md25_simple",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/md25_simple/setup.cfg",
+      "path": "robot/ros2_ws/src/md25_simple/setup.cfg",
+      "original_sha256": "8cec7896845b77e2fd2e647df5419e64f56c58a522cfca5c51d3e8abf0526c36",
+      "published_sha256": "8cec7896845b77e2fd2e647df5419e64f56c58a522cfca5c51d3e8abf0526c36",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/md25_simple/setup.py",
+      "path": "robot/ros2_ws/src/md25_simple/setup.py",
+      "original_sha256": "5400adee9d4c3a7fc6cc7c33ac159b4bd2aeedc014f1d33c7441a695b5e2fc45",
+      "published_sha256": "a70263556b786c0376e266426cc6165c6ed9ecef80555a8f7361b0020db58434",
+      "changes": [
+        "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; used UNLICENSED because no explicit custom-code licensing grant was supplied. Node implementation unchanged."
+      ]
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/launch/mpu6050.launch.py",
+      "path": "robot/ros2_ws/src/mpu6050_ros2/launch/mpu6050.launch.py",
+      "original_sha256": "1939e672add3a11204dcf94e7c191285ef809796f5267da2ff566d423d9d2dc8",
+      "published_sha256": "1939e672add3a11204dcf94e7c191285ef809796f5267da2ff566d423d9d2dc8",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/mpu6050_ros2/__init__.py",
+      "path": "robot/ros2_ws/src/mpu6050_ros2/mpu6050_ros2/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/mpu6050_ros2/mpu6050_node.py",
+      "path": "robot/ros2_ws/src/mpu6050_ros2/mpu6050_ros2/mpu6050_node.py",
+      "original_sha256": "25f3b59eab22951b42637f2d7f963545bc6f091ebc8f3994f9f573994601f2a7",
+      "published_sha256": "25f3b59eab22951b42637f2d7f963545bc6f091ebc8f3994f9f573994601f2a7",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/package.xml",
+      "path": "robot/ros2_ws/src/mpu6050_ros2/package.xml",
+      "original_sha256": "27df0ae8c47c59320e4dbeaa8c8428a50865400cb7563839c2e5b3233c395084",
+      "published_sha256": "9f4bdc996d2ee410cd740d2541bc8aaf7f7e935bc5f308187a0f0e6620b92dd9",
+      "changes": [
+        "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; preserved the original MIT license declaration. Node implementation unchanged."
+      ]
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/resource/mpu6050_ros2",
+      "path": "robot/ros2_ws/src/mpu6050_ros2/resource/mpu6050_ros2",
+      "original_sha256": "1be00c95e7809c7440e16021f7080bd21e5c6d398071e9734281049d2b63aede",
+      "published_sha256": "1be00c95e7809c7440e16021f7080bd21e5c6d398071e9734281049d2b63aede",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/setup.cfg",
+      "path": "robot/ros2_ws/src/mpu6050_ros2/setup.cfg",
+      "original_sha256": "53c63387ff466dd0733b960a644254991560a0bab8f0d42641703e595274b30a",
+      "published_sha256": "53c63387ff466dd0733b960a644254991560a0bab8f0d42641703e595274b30a",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ros2_ws/src/mpu6050_ros2/setup.py",
+      "path": "robot/ros2_ws/src/mpu6050_ros2/setup.py",
+      "original_sha256": "a8462908e002ead1301c5c8c6c0f7a6f5ded65fb54cfe211f01c85ef5239e80a",
+      "published_sha256": "e0864d92d278cb725aab5cef0f1fbf1371057fe5bb4c358ec97a9483148c47d5",
+      "changes": [
+        "Repaired ament Python packaging metadata and declared ROS/OS runtime dependencies; retained external MPU6050 package in robot/requirements-pip.txt; replaced placeholder maintainer with public author identity; preserved the original MIT license declaration. Node implementation unchanged."
+      ]
+    },
+    {
+      "source": "additional-robot-workspace/ldlidar_ros2_ws/src/ldlidar_ros2/launch/ld06.launch.py",
+      "path": "dependencies/ldlidar/ld06.launch.py",
+      "original_sha256": "653aae7a9be4da0317f5b48c2b55959f7cbc667df9dd2aa872f5f6f970fd55e7",
+      "published_sha256": "653aae7a9be4da0317f5b48c2b55959f7cbc667df9dd2aa872f5f6f970fd55e7",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ldlidar_ros2_ws/src/ldlidar_ros2/LICENSE",
+      "path": "dependencies/ldlidar/LICENSE",
+      "original_sha256": "9a73e53bf9966dfe69c0f8723d7db4b06ff8e81cfa2ea39b9d89f86565282950",
+      "published_sha256": "9a73e53bf9966dfe69c0f8723d7db4b06ff8e81cfa2ea39b9d89f86565282950",
+      "changes": []
+    },
+    {
+      "source": "additional-robot-workspace/ldlidar_ros2_ws/src/ldlidar_ros2/sdk/LICENSE",
+      "path": "dependencies/ldlidar/SDK-LICENSE",
+      "original_sha256": "51315508d0eb756ef107e526dcd0d7e2ac4ccd0bfba8b22b709c708f7fbaaa81",
+      "published_sha256": "51315508d0eb756ef107e526dcd0d7e2ac4ccd0bfba8b22b709c708f7fbaaa81",
+      "changes": []
+    },
+    {
+      "source": "recovered robot/control workspace: ros2_ws/src/gaussian_return.py",
+      "path": "experiments/return_smoothing/gaussian_return.py",
+      "original_sha256": "ebfa07a18a60727fcdb657f971e545b16b1a509e260989144d152a215f356103",
+      "published_sha256": "ebfa07a18a60727fcdb657f971e545b16b1a509e260989144d152a215f356103",
+      "changes": []
+    },
+    {
+      "source": "recovered robot/control workspace: ros2_ws/src/tsp.py",
+      "path": "experiments/multi_stop/tsp_prototype.py",
+      "original_sha256": "acaf08e4aaae658066be48294cc542d21cd7ff5c152df6c20e9631d4626d9579",
+      "published_sha256": "acaf08e4aaae658066be48294cc542d21cd7ff5c152df6c20e9631d4626d9579",
+      "changes": []
+    },
+    {
+      "source": "supplied PC archive: ros2_ws/src/Kalman filter heading.ipynb",
+      "path": "experiments/heading/heading_filter_variants.ipynb",
+      "original_sha256": "94b8b413e9caeb1cdd4c38816c0849cb5a99ce347ffc8c7f081a14d7e734d33d",
+      "published_sha256": "d5f4aeb9d9484bd4f2a0091deb95f4aeefb3e9e9af3b692d3aa6ebb1885f54d3",
+      "changes": [
+        "Cleared outputs, execution counts and cell metadata; added usage note. Original code cells unchanged."
+      ]
+    }
+  ],
+  "dependency_revisions": {
+    "ldlidar_ros2": {
+      "url": "https://github.com/ldrobotSensorTeam/ldlidar_ros2.git",
+      "commit": "0f6101c93db0b4448cbe7a654826adcdee50622f"
+    },
+    "ldlidar_sdk": {
+      "url": "https://github.com/ldrobotSensorTeam/ldlidar_sdk.git",
+      "commit": "6148cd3c33ae39adbd7e12faf82567fa8f8e7b0d"
+    },
+    "newer_vs_archive_driver": "Same commits and byte-identical adapted LD06 launch; only upstream diff is ttyUSB0 to ttyAMA0 plus newline."
+  },
+  "review_coverage_summary": {
+    "generated build/install/log products": 502,
+    "alternative controller/mapper experiments excluded from robot hardware subset": 53,
+    "cached bytecode": 6,
+    "template package tests": 9,
+    "published selected original": 16,
+    "recorded runtime pose histories": 2,
+    "Git metadata": 53,
+    "upstream source referenced by pinned dependency": 67
+  },
+  "coverage_note": "Counts describe robot hardware subset review; return control and selected Gaussian/TSP experiments are also published in PC/experiments directories. Generated outputs, unrelated branches and complete upstream dependency sources are excluded.",
+  "publication_additions": "Package wrappers, documentation, synthetic checks and media manifests are new. Media provenance is recorded in docs/demos and docs/assets.",
+  "license_note": "Preserved the original MPU6050 package MIT declarations in setup.py and package.xml. Original MD25 package metadata had TODO/unspecified licensing, so its publication metadata uses UNLICENSED. Both upstream LDROBOT MIT notices are preserved exactly."
+}

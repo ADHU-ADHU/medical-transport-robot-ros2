@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>md25_simple</name>
+  <version>0.0.1</version>
+  <description>Normalized ROS 2 motor command receiver for the MD25 differential-drive controller.</description>
+  <maintainer email="130308572+ADHU-ADHU@users.noreply.github.com">Adhithya Palanisamy Chandrasekaran</maintainer>
+  <license>UNLICENSED</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>python3-smbus</exec_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>roverlink_control</name>
+  <version>0.1.0</version>
+  <description>ROS 2 operator controls, teach-and-return navigation and frontier exploration.</description>
+  <maintainer email="130308572+ADHU-ADHU@users.noreply.github.com">Adhithya Palanisamy Chandrasekaran</maintainer>
+  <license>UNLICENSED</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+  <exec_depend>python3-pygame</exec_depend>
+  <exec_depend>python3-tk</exec_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>python3-yaml</test_depend>
+  <test_depend>ament_index_python</test_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

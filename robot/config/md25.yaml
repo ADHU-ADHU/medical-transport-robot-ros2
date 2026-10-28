@@ -1,0 +1,8 @@
+# Recorded demonstration used a 35-step limit around stop byte 128.
+md25_controller:
+  ros__parameters:
+    speed_limit_steps: 35
+    deadband: 0.05
+    invert_turn: true
+    watchdog_timeout_s: 0.2
+    watchdog_period_s: 0.05

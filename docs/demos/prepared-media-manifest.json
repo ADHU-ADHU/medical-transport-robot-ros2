@@ -1,0 +1,90 @@
+{
+  "source_root": "Supplied Telerobotics folder",
+  "path_convention": "Source filenames are relative to the supplied folder; generated file paths are relative to this directory.",
+  "recordings": [
+    {
+      "file": "run-1-live.mp4",
+      "source": "Run1_video.mp4",
+      "source_start_seconds": 0,
+      "source_duration_seconds": 40.154567,
+      "filter": "fps=24,scale=478:850:flags=lanczos",
+      "speed": 1.0,
+      "audio": "removed",
+      "encoding": "H264 CRF26 yuv420p,24fps,+faststart",
+      "bytes": 3208328,
+      "sha256": "f8fd074edf108bd942755fd8474e1345e69f07afcd9bb8d21879631977cecf17",
+      "source_sha256": "47244d92b883823db2777077c7063b2d3c1f26a6aa9ab888e2df88a9c698ad01",
+      "source_bytes": 8014396
+    },
+    {
+      "file": "run-2-live.mp4",
+      "source": "Run2_video.mp4",
+      "source_start_seconds": 0,
+      "source_duration_seconds": 34.871478,
+      "filter": "fps=24,scale=478:850:flags=lanczos",
+      "speed": 1.0,
+      "audio": "removed",
+      "encoding": "H264 CRF26 yuv420p,24fps,+faststart",
+      "bytes": 2449375,
+      "sha256": "a4682fd0c99df5f6d45547b73b377be3b6299d7c93701b3a167f659d6bb169c5",
+      "source_sha256": "e480be086e60fcdb32d37cf76b99df8318ebc117487bb38b56179850f8928fde",
+      "source_bytes": 6995037
+    },
+    {
+      "file": "run-1-preview.gif",
+      "source": "Run1_video.mp4",
+      "source_start_seconds": 5,
+      "source_duration_seconds": 10,
+      "filter": "fps=5,scale=180:-1:flags=lanczos",
+      "speed": 1.0,
+      "audio": "not included",
+      "encoding": "GIF,64-color palette,Bayer dithering",
+      "bytes": 1400652,
+      "sha256": "5f308049a53263f224f7adfd869e41c1280416d51acc6e6c38ab870dd55914b6",
+      "source_sha256": "47244d92b883823db2777077c7063b2d3c1f26a6aa9ab888e2df88a9c698ad01",
+      "source_bytes": 8014396
+    },
+    {
+      "file": "run-2-preview.gif",
+      "source": "Run2_video.mp4",
+      "source_start_seconds": 7,
+      "source_duration_seconds": 10,
+      "filter": "fps=5,scale=180:-1:flags=lanczos",
+      "speed": 1.0,
+      "audio": "not included",
+      "encoding": "GIF,64-color palette,Bayer dithering",
+      "bytes": 1219073,
+      "sha256": "252b470388a0e2bb4ea135c05767c479dd4cccd8c948568271bc9b56414df386",
+      "source_sha256": "e480be086e60fcdb32d37cf76b99df8318ebc117487bb38b56179850f8928fde",
+      "source_bytes": 6995037
+    },
+    {
+      "file": "frontier-planning-preview.gif",
+      "source": "frontier_exploration_no_distrubance_run1.webm",
+      "source_start_seconds": 14,
+      "source_duration_seconds": 18,
+      "filter": "crop=780:610:25:25,fps=6,scale=480:-1:flags=lanczos",
+      "speed": 1.0,
+      "audio": "not included",
+      "encoding": "GIF,96-color palette,Bayer dithering",
+      "bytes": 534862,
+      "sha256": "9f41560509b6c8fd0eae1972891bdc4208eb9870ec41c361f1ce961cabd3cef7",
+      "source_sha256": "ab26858f83704d15a7097eb8fa5bc00c6aa94124bb75bce6db3a3c917398b7e2",
+      "source_bytes": 24709965
+    },
+    {
+      "file": "slam-rviz-preview.gif",
+      "source": "frontier_exploration_no_disturbance_run1.webm",
+      "source_start_seconds": 86,
+      "source_duration_seconds": 18,
+      "filter": "crop=2440:1460:35:50,fps=4,scale=700:-1:flags=lanczos",
+      "speed": 1.0,
+      "audio": "not included",
+      "encoding": "GIF,96-color palette,Bayer dithering",
+      "bytes": 410686,
+      "sha256": "55328fb27877b8fc1d2d9c13585a15c6c10c701efad16e443992a4d845fef8d4",
+      "source_sha256": "aaf30dbb32d022cc02d8b0d5c5dae9be818072aedbffc7a7beb075880fe24cd8",
+      "source_bytes": 10797101
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "source_root": "Supplied Telerobotics folder",
+  "path_convention": "Source filenames are relative to the supplied folder. Nested duplicate copies were byte-identical.",
+  "recordings": [
+    {
+      "source": "Frontier_explorer_with_disturbance.webm",
+      "duplicate_copies_in_supplied_folder": 2,
+      "sha256": "94a7a2f4615a4f6c63fa516508127a86e644277eff487d20988a58eac491fef7",
+      "bytes": 16643712,
+      "duration_seconds": 77.729292,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "vp8",
+          "width": 2456,
+          "height": 1567,
+          "r_frame_rate": "1000/1",
+          "channels": null,
+          "sample_rate": null
+        }
+      ]
+    },
+    {
+      "source": "Run1_video.mp4",
+      "duplicate_copies_in_supplied_folder": 2,
+      "sha256": "47244d92b883823db2777077c7063b2d3c1f26a6aa9ab888e2df88a9c698ad01",
+      "bytes": 8014396,
+      "duration_seconds": 40.154567,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 478,
+          "height": 850,
+          "r_frame_rate": "30/1",
+          "channels": null,
+          "sample_rate": null
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "width": null,
+          "height": null,
+          "r_frame_rate": "0/0",
+          "channels": 2,
+          "sample_rate": "48000"
+        }
+      ],
+      "watch_url": "https://drive.google.com/file/d/1N3Wnz_RERe_v0gNNwyVqRQkU6eJ4O28J/view?usp=drivesdk",
+      "watch_url_access_check": {
+        "date": "2026-10-27",
+        "permission_type": "anyone",
+        "role": "reader",
+        "allow_file_discovery": false,
+        "permissions_changed": false,
+        "match_basis": "Exact source filename and byte size"
+      }
+    },
+    {
+      "source": "Run2_video.mp4",
+      "duplicate_copies_in_supplied_folder": 2,
+      "sha256": "e480be086e60fcdb32d37cf76b99df8318ebc117487bb38b56179850f8928fde",
+      "bytes": 6995037,
+      "duration_seconds": 34.871478,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 478,
+          "height": 850,
+          "r_frame_rate": "30/1",
+          "channels": null,
+          "sample_rate": null
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "width": null,
+          "height": null,
+          "r_frame_rate": "0/0",
+          "channels": 2,
+          "sample_rate": "48000"
+        }
+      ],
+      "watch_url": "https://drive.google.com/file/d/1L8eBylxhtYKRo3VYYARCjCyfaFWwbkDD/view?usp=drivesdk",
+      "watch_url_access_check": {
+        "date": "2026-10-27",
+        "permission_type": "anyone",
+        "role": "reader",
+        "allow_file_discovery": false,
+        "permissions_changed": false,
+        "match_basis": "Exact source filename and byte size"
+      }
+    },
+    {
+      "source": "frontier_exploration_no_distrubance_run1.webm",
+      "duplicate_copies_in_supplied_folder": 2,
+      "sha256": "ab26858f83704d15a7097eb8fa5bc00c6aa94124bb75bce6db3a3c917398b7e2",
+      "bytes": 24709965,
+      "duration_seconds": 66.694404,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "vp8",
+          "width": 2456,
+          "height": 1567,
+          "r_frame_rate": "1000/1",
+          "channels": null,
+          "sample_rate": null
+        }
+      ]
+    },
+    {
+      "source": "frontier_exploration_no_disturbance_run1.webm",
+      "duplicate_copies_in_supplied_folder": 2,
+      "sha256": "aaf30dbb32d022cc02d8b0d5c5dae9be818072aedbffc7a7beb075880fe24cd8",
+      "bytes": 10797101,
+      "duration_seconds": 123.568803,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "vp8",
+          "width": 2485,
+          "height": 1549,
+          "r_frame_rate": "1000/1",
+          "channels": null,
+          "sample_rate": null
+        }
+      ]
+    },
+    {
+      "source": "slam_frontier_exploration_nodisturbacne_run2.webm",
+      "duplicate_copies_in_supplied_folder": 2,
+      "sha256": "820af4dcb708a2f3b1c05696a81a357c3c7e6dfa4b28f5b7cfb6f200eb5d2941",
+      "bytes": 13900934,
+      "duration_seconds": 112.956844,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "vp8",
+          "width": 2466,
+          "height": 1527,
+          "r_frame_rate": "1000/1",
+          "channels": null,
+          "sample_rate": null
+        }
+      ]
+    },
+    {
+      "source": "slam_with_distrubance.webm",
+      "duplicate_copies_in_supplied_folder": 2,
+      "sha256": "b3479f672bd9b898b529481b42c79e56f930c9a796b72587bf9f7833cbbd75f4",
+      "bytes": 24290347,
+      "duration_seconds": 156.85847,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "vp8",
+          "width": 2485,
+          "height": 1549,
+          "r_frame_rate": "1000/1",
+          "channels": null,
+          "sample_rate": null
+        }
+      ]
+    }
+  ]
+}

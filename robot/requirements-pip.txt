@@ -1,0 +1,2 @@
+# External MPU6050 driver; ROS and OS dependencies are declared in package.xml.
+mpu6050-raspberrypi
